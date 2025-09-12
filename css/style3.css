@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #333;
+}
+header{
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10%;
+}
+
+.logo{
+    width: 50px;
+    display: block;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+    font-size: 18px;
+
+}
+.nav-links a{
+    text-decoration: none;
+    color: #333;
+}
+
+.botonderegistro{
+    background-color: blue;
+    border-radius: 30px;
+    padding: 10px 22px;
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.botonderegistro img{
+    width: 20px;
+}

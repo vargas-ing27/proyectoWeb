@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: gray;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+nav{
+    background-color: beige;
+    padding: 10px;
+}
+
+nav ul{
+
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Section apila artículos en columna */
+section {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* 2) Nuevo layout de cada artículo: imagen a la izquierda, título encima de la descripción a la derecha */
+article {
+  display: grid;
+  grid-template-columns: 120px 1fr; /* columna para imagen y columna para contenido */
+  grid-template-rows: auto 1fr;     /* dos filas: h2 (auto) y p (1fr) */
+  gap: 15px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+  /* quitar margin-bottom si usas section gap (más consistente) */
+  margin-bottom: 0;
+  align-items: start; /* asegura que todos los items arranquen desde arriba */
+}
+
+/* 3) Imagen dentro del article: columna 1, ocupa verticalmente las dos filas (para que quede alineada con h2+p) */
+article img {
+  width: 120px;       /* mismo ancho en todas */
+  height: 120px;      /* fijo para que no cambien de alto */
+  object-fit: cover;  /* recorta la imagen para llenar bien el cuadro */
+  border-radius: 8px; /* esquinas redondeadas */
+  display: block;     /* evita espacios raros */
+}
+
+/* 4) Título y párrafo en la segunda columna */
+article h2 {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+article p {
+  grid-column: 2;
+  grid-row: 1.5;
+  margin: 0;
+  line-height: 1;
+  margin-top: 0;
+
+}
+
+/* 5) Aside: columna vertical con logos centrados horizontalmente.
+   Ajustamos gap para que la separación entre logos sea parecida a la separación entre artículos. */
+aside {
+  flex: 1;
+  background: #eee;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* 6) Logos del aside con mismo ancho que las imágenes de los artículos */
+aside img {
+  width: 120px;       /* exactamente igual al de article */
+  height: 120px;      /* misma altura */
+  object-fit: cover;  /* recorta sin deformar */
+  border-radius: 8px; /* misma estética */
+  display: block;     /* evita espacios en línea */
+  background: white;  /* opcional: resalta el fondo */
+  padding: 5px;       /* da un margen interno */
+}
+
+/* 7) Pequeña mejora responsive: en pantallas estrechas apilamos main verticalmente */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Los artículos se vuelven columna: imagen arriba, título y descripción debajo */
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  article img, aside img {
+    width: 100px; /* reducir un poco en móviles */
+  }
+
+  aside {
+    align-items: center;
+  }
+}
+
+footer {
+  background:gray;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  font-weight: bold;
+}
