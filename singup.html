@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+
+        <div><h1>El Noticiero</h1></div>
+
+        </header>
+        <nav>
+
+            <div class="nav-left">
+            <ul>
+                <li><a href="examen.html">Noticias</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="">Sing up</a></li>
+                <li><a href="" class="dropdown">About</a></li>
+            </ul>
+            </div>
+
+            <div class="nav-right">
+            <input type="text" placeholder="Search">
+
+            <button><a href="#">Search</Search></a></button>
+            </div>
+        </nav>
+
+        <main>
+  <div class="signup-form-container">
+    <form class="signup-form">
+      <h2>Ingrese los datos para registrarse</h2>
+      <div class="signup-row">
+        <div class="signup-group">
+          <label for="nombres">Nombres</label>
+          <input type="text" id="nombres" name="nombres" required>
+        </div>
+        <div class="signup-group">
+          <label for="apellidos">Apellidos</label>
+          <input type="text" id="apellidos" name="apellidos" required>
+        </div>
+      </div>
+      <div class="signup-row">
+        <div class="signup-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="signup-group">
+          <label for="telefono">Teléfono</label>
+          <input type="text" id="telefono" name="telefono" required>
+        </div>
+      </div>
+      <div class="signup-row">
+        <div class="signup-group">
+          <label for="estrato">Estrato</label>
+          <input type="number" id="estrato" name="estrato" min="1" max="6" value="5" required>
+        </div>
+        <div class="signup-group">
+          <label for="fecha">Fecha Nacimiento</label>
+          <input type="date" id="fecha" name="fecha" required>
+        </div>
+        <div class="signup-group">
+          <label for="grupo">Grupo Sanguíneo</label>
+          <select id="grupo" name="grupo" required>
+            <option value="">Select</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+          </select>
+        </div>
+      </div>
+      <div class="signup-row">
+        <div class="signup-group genero">
+          <label>Género</label>
+          <div>
+            <input type="radio" id="masculino" name="genero" value="masculino" checked>
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="femenino" name="genero" value="femenino">
+            <label for="femenino">Femenino</label>
+          </div>
+        </div>
+        <div class="signup-group actividades">
+          <label>Actividades Favoritas</label>
+          <div>
+            <input type="checkbox" id="futbol" name="actividades" value="Futbol" checked>
+            <label for="futbol">Futbol</label>
+            <input type="checkbox" id="baloncesto" name="actividades" value="Baloncesto">
+            <label for="baloncesto">Baloncesto</label>
+            <input type="checkbox" id="voleibol" name="actividades" value="Voleibol" checked>
+            <label for="voleibol">Voleibol</label>
+            <input type="checkbox" id="ciclismo" name="actividades" value="Ciclismo">
+            <label for="ciclismo">Ciclismo</label>
+          </div>
+        </div>
+      </div>
+      <div class="signup-buttons">
+        <button type="submit" class="btn-green">Registrar</button>
+        <button type="button" class="btn-red" onclick="window.location.href='examen.html'">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</main>
+
+
+</body>
+</html>
