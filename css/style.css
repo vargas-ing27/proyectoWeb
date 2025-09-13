@@ -408,3 +408,160 @@ article img {
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+
+@media (max-width: 600px) {
+  header {
+    font-size: 1.2em;
+    padding: 10px 0;
+    width: 100vw;
+    box-sizing: border-box;
+    margin: 0;
+    justify-content: center;
+    
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 10px;
+  }
+
+  .nav-left ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .nav-right {
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+
+  .nav-right input {
+    width: 60%;
+    margin-left: 0;
+  }
+
+  .nav-right button {
+    width: 35%;
+    margin-left: 5px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    min-width: 100px;
+    box-shadow: none;
+  }
+
+  section {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  article {
+    width: 95vw;
+    max-width: 400px;
+  }
+
+  .noticias-extra {
+    max-width: 100vw;
+    padding: 0 5px;
+  }
+
+  .noticias-tabla {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+
+  .noticias-col {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  header {
+    width: 100vw;
+    left: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 2em;
+    padding: 18px 0;
+    justify-content: center;
+  }
+
+  nav {
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .nav-left ul {
+    flex-direction: row;
+    gap: 25px;
+    width: auto;
+    margin-bottom: 0;
+  }
+
+  .nav-right {
+    width: auto;
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+
+  .nav-right input {
+    width: 180px;
+    margin-left: 0;
+  }
+
+  .nav-right button {
+    width: 100px;
+    margin-left: 10px;
+  }
+
+  section {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+
+  article {
+    width: 250px;
+    max-width: 90vw;
+  }
+
+  .noticias-extra {
+    max-width: 100vw;
+    padding: 0 10px;
+  }
+
+  .noticias-tabla {
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+    margin: 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 15px 0;
+  }
+
+  .noticias-col {
+    width: 50%;
+    min-width: 200px;
+    text-align: center;
+  }
+}
